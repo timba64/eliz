@@ -1,0 +1,108 @@
+/*! I made this css from PocketGrid 1.1.0 and Bootstrap
+* Copyright 2018 Tim
+* MIT License
+*/
+/* Border-box-sizing */
+.container, .row, .container:after, .container:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+}
+
+.row {
+  @include flexbox();
+  @include flex-wrap(wrap);
+}
+
+.wr-row:before,
+.wr-row:after,
+.slider-inner:before,
+.slider-inner:after,
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+
+.wr-row:after,
+.slider-inner:after,
+.clearfix:after,
+.container:after {
+  clear: both;
+}
+
+.noscroll { 
+  overflow-y: hidden;
+}
+
+.mbot-0 {
+  margin-bottom: 0;
+}
+
+.mbot-10 {
+  margin-bottom: 10px;
+}
+
+.mbot-15 {
+  margin-bottom: 15px;
+}
+
+.mbot-20 {
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 0rem;
+}
+
+.title-section {
+  margin: 0.67rem 0;
+  font-size: type-scale(1.2);
+  font-family: $font-title;
+  font-weight: 400;
+  color: $col-black;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: none;
+}
+
+.bcrumbs {
+  background-color: $full-gray;
+  padding: 14px 0;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  section .row {
+    @include flex-direction(row);
+  }
+  .title-section {
+    font-size: type-scale(1.8);
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

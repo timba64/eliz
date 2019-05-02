@@ -1,0 +1,31 @@
+.about {
+    background: url(img/bg-about-mob.jpg) center /cover no-repeat;
+    padding-bottom: 6rem;
+
+    .title-section {
+        margin: 3rem 2rem;
+        text-transform: uppercase;
+        color: $col-white;
+    }
+
+    .about-text {
+        font-weight: 300;
+        color: $col-white;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .about {
+        background: url(img/bg-about.jpg) center /cover no-repeat;
+        padding-bottom: 8rem;
+
+        .container-about {
+            width: 660px;
+            margin: 0 auto; 
+        }
+
+        .title-section {
+            margin: 6rem 5rem;
+        }
+    }
+}

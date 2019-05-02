@@ -1,0 +1,128 @@
+.promo {
+    position: relative;
+    height: 74vh;
+
+    .bg-slide {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .container-slider {
+        height: 100%;
+    }
+
+    .slider-main {
+        height: 100%;
+
+        .icon-arright {
+            position: absolute;
+            margin: 0 auto;
+            top: 40vh;
+            right: 0;
+            cursor: pointer;
+
+            span {
+                display: block;
+                color: $col-white;
+                font-size: 5rem;
+            }
+        }
+
+        .icon-arleft {
+            position: absolute;
+            z-index: 10;
+            margin: 0 auto;
+            top: 40vh;
+            left: 0;
+            cursor: pointer;
+
+            span {
+                display: block;
+                color: $col-white;
+                font-size: 5rem;
+                @include rotate(180deg);
+            }
+        }
+    }
+
+    .slick-list {
+        height: 100%;
+
+        .slick-track {
+            height: 100%;
+        }
+
+        .slick-slide {
+            & > div {
+                height: 100%;
+            }
+        }
+
+        .wr-slide {
+            height: 100%;
+            color: $col-white;
+            text-align: center;
+
+            .title {
+                margin: 10rem 0 2rem;
+                font-size: 2.4rem;
+                text-transform: uppercase;
+            }
+
+            hr {
+                border: 1px solid $col-red;
+            }
+
+            .subtitle {
+                text-align: center;
+                margin: 0 auto 4rem;
+            }
+
+            .but-top {
+                @include but-a(8px 30px, 0px);
+                background-color: $col-red;
+                -webkit-box-shadow: 0px 0px 83px 0px rgba(237,21,64,0.56);
+                -moz-box-shadow: 0px 0px 83px 0px rgba(237,21,64,0.56);
+                box-shadow: 0px 0px 83px 0px rgba(237,21,64,0.56);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 374px) {
+
+}
+
+@media screen and (min-width: 992px) {
+    .promo{
+        height: 100vh;
+
+        .slick-list {
+            .wr-slide {
+
+                .title {
+                    margin: 23rem 0 3rem;
+                    font-size: 4.5rem;
+                }
+
+                hr {
+                    margin: 0 30rem 5rem;
+                }
+
+                .subtitle {
+                    width: 70%;
+                    margin: 0 auto 7rem;
+                }
+
+                .but-top {
+                    @include but-a(10px 38px, 0px);
+                }
+            }
+        }
+    }
+}

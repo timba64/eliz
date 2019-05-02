@@ -1,0 +1,22 @@
+{
+  "name": "elising",
+  "version": "1.0.0",
+  "description": "for ab-marketing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tim",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}

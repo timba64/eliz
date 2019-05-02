@@ -1,0 +1,271 @@
+.m-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 25px;
+    height: 34px;
+    padding: 0px;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+}
+  
+.m-button span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $col-red;
+    @include transition();  
+}
+  
+.m-button span:before {
+    position: absolute;
+    right: 0;
+    top: -12px;
+    display: block;
+    content: '';
+    width: 34px;
+    height: 2px;
+    background-color: $col-white;
+}
+  
+.m-button span:after {
+    position: absolute;
+    right: 0;
+    bottom: -12px;
+    display: block;
+    content: '';
+    width: 34px;
+    height: 2px;
+    background-color: $col-white;
+}
+
+.m-button span::before, .m-button span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.m-button span::before {
+    transition-property: top, transform;
+}
+
+.m-button span::after {
+    transition-property: bottom, transform;
+}
+  
+.m-button.open span {
+    background-color: transparent;
+}
+  
+.m-button.open span:before {
+    @include rotate(45deg);
+    top: 0;
+}
+  
+.m-button.open span:after {
+    @include rotate(-45deg);    
+    bottom: 0;
+}
+
+.m-button.open span::before, .m-button.open span::after {
+    transition-delay: 0s, 0.3s;
+}
+
+.nav-holder {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background-color: $col-black;
+    height: 100vh;
+    width: 100%;
+}
+
+.top-nav {
+    margin: 0 15px;
+
+    ul {
+        position: relative;
+        padding: 0;
+        margin-top: calc(50vh - 240px);
+        margin-left: auto;
+        margin-right: auto;
+
+        li {
+            display: block;
+            border-bottom: 1px solid $col-red;
+            -webkit-transform: scaleY(1.15) translateY(-30px);
+            transform: scaleY(1.15) translateY(-30px);
+            opacity: 0;
+            -webkit-transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+            transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        
+        }
+
+        a {
+            display: block;
+            padding: 14px;
+            font-size: 1.6rem;
+            color: $col-white;
+        }
+    }
+
+    &.open {
+        ul {
+
+            li {
+                transform: scaleY(1) translateY(0px);
+                opacity: 1;
+
+                &:nth-child(1) {
+                    -webkit-transition-delay: 0.2s;
+                    transition-delay: 0.2s;
+                    a {
+                        border-top: 1px solid rgba(42,42,42, 0.4);
+                    }
+                }
+                &:nth-child(2) {
+                    -webkit-transition-delay: 0.3s;
+                    transition-delay: 0.3s;
+                }
+                &:nth-child(3) {
+                    -webkit-transition-delay: 0.4s;
+                    transition-delay: 0.4s;
+                }
+                &:nth-child(4) {
+                    -webkit-transition-delay: 0.5s;
+                    transition-delay: 0.5s;
+                }
+                &:nth-child(5) {
+                    -webkit-transition-delay: 0.6s;
+                    transition-delay: 0.6s;
+                }
+                &:nth-child(6) {
+                    -webkit-transition-delay: 0.7s;
+                    transition-delay: 0.7s;
+                }
+                &:nth-child(7) {
+                    -webkit-transition-delay: 0.8s;
+                    transition-delay: 0.8s;
+                }
+                &:nth-child(8) {
+                    -webkit-transition-delay: 0.9s;
+                    transition-delay: 0.9s;
+                }
+                &:nth-child(9) {
+                    -webkit-transition-delay: 0.98s;
+                    transition-delay: 0.98s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .m-button {
+        width: 30px;
+    }
+
+    .m-button span::before {
+        width: 40px;
+    }
+
+    .m-button span::after {
+        width: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .top-nav {
+
+        ul {
+            max-width: 960px;
+
+            &::before {
+                display: block;
+                content: " ";
+                border-right: 1px solid $col-red;
+                height: 95%;
+                position: absolute;
+                top: 0;
+                left: 33%;
+                @include transition($type: opacity, $time: 400ms);
+                opacity: 0;
+            }
+
+            &::after {
+                display: block;
+                content: " ";
+                border-right: 1px solid $col-red;
+                height: 95%;
+                position: absolute;
+                top: 0;
+                left: 66%;
+                @include transition($type: opacity, $time: 400ms);
+                opacity: 0;
+            }
+
+            li {
+                display: inline-block;
+                width: 33%;
+                text-align: center;
+                border-bottom: none;
+                margin-bottom: 2rem;
+
+                &:first-child {
+                    text-align: right;
+                    padding-right: 3%; 
+                }
+
+                &:nth-child(3n+4) {
+                    text-align: right;
+                    padding-right: 3%;
+                }
+
+                &:nth-child(3n) {
+                    text-align: left;
+                    padding-left: 3%;
+                }
+
+                a {
+                    font-size: 2.4rem;
+                }
+            }
+
+            &.open {
+                &::before {
+                    opacity: 1;
+                }
+
+            }
+        }
+
+        &.open {
+            ul {
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            ul {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .top-nav {
+        ul {
+            margin-top: calc(50vh - 200px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+}

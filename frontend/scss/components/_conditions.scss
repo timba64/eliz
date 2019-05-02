@@ -1,0 +1,68 @@
+.conditions {
+    .title-section {
+        margin: 3rem 2rem;
+        text-transform: uppercase;
+    }
+    
+    .cond-text {
+        margin: 3rem auto 3rem;
+        text-align: center;
+    }
+
+    .wr-row {
+        margin: 3rem auto 3rem;
+    }
+
+    .cell {
+        text-align: center;
+
+        .cell-title {
+            padding: 0.8rem 0;
+            color: $col-white;
+            background: $col-red;
+        }
+
+        .cell-text {
+            height: 80px;
+            padding: 3rem 0 0;
+            color: $gray-text;
+            background: $mid-gray;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .conditions {
+        .cell {
+            width: 50%;
+            float: left;
+
+            .cell-text {
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .conditions {
+        .title-section {
+            margin: 6rem 5rem;
+        }
+
+        .cond-text {
+            width: 840px;
+            margin: 3rem auto 5rem;
+        }
+
+        .wr-row {
+            width: 950px;
+            margin: 3rem auto 6rem;
+        }
+
+        .cell {
+            width: 25%;
+            float: left;
+        }
+    }
+}

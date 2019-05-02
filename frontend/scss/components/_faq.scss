@@ -1,0 +1,166 @@
+.faq {
+    .container-faq {
+        padding-bottom: 3rem;
+    }
+    .title-section {
+        margin: 3rem 2rem;
+        text-transform: uppercase;
+    }
+
+    .wr-row {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .tablink {
+        width: 128px;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-bottom: 8px;
+        padding: 8px 6px;
+        background: $mid-gray;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        @include transition();
+
+        &.active {
+            background: $col-red;
+            color: $col-white;
+
+            &:hover {
+                background: $col-red;
+            }
+        }
+
+        &:hover {
+            background: mix(black, $mid-gray, 10%);
+        }
+    }
+
+    @keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    .tab-content {
+        display: none;
+        animation: fadeEffect 1s;
+    }
+
+    .accordion {
+        position: relative;
+        background-color: $col-red;
+        color: $col-white;
+        cursor: pointer;
+        padding: 14px 40px 14px 14px;
+        margin-bottom: 4px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        @include transition();
+    
+        .icon-vector {
+            display: block;
+            position: absolute;
+            top: 16px;
+            right: 10px;
+            width: 26px;
+            height: 26px;
+            font-size: 26px;
+            color: $col-white;
+            @include transition();
+            @include rotate(90deg);
+        }
+
+        &.active {
+            background-color: mix(black, $col-red, 10%);
+
+            .icon-vector {
+                transform: rotate(270deg);
+            }
+        }
+
+        &:hover {
+            background-color: mix(black, $col-red, 10%); 
+        }
+    }
+
+    .panel {
+        padding: 0 18px;
+        background-color: $mid-gray;
+        max-height: 0;
+        overflow: hidden;
+        @include transition();
+
+        .wr-pan {
+            padding: 18px 0;
+            font-weight: 300;
+        }
+    }
+}
+
+@media screen and (min-width: 374px) {
+    .faq {
+        .tablink {
+            width: 138px;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .faq {
+        .tablink {
+            width: 170px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .faq {
+        .tablink {
+            padding: 10px 6px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .accordion {
+            padding: 14px 46px 14px 14px;
+
+            .icon-vector {
+                top: 12px;
+                right: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .faq {
+        .container-faq {
+            width: 820px;
+            padding-bottom: 6rem;
+        }
+
+        .title-section {
+            margin: 6rem 5rem;
+        }
+
+        .tablink {
+            width: 190px;
+        }
+
+        .tab-content {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

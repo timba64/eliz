@@ -1,0 +1,45 @@
+.mapa {
+    position: relative;
+    height: 500px;
+
+    .block-mapa {
+        position: absolute;
+        width: 100%;
+    }
+
+    .widget-mapa {
+        position: relative;
+        width: 300px;
+        padding: 25px;
+        background: $col-red;
+
+        span[class^="icon-"] {
+            float: left;
+            display: block;
+            padding: 10px;
+            border: 1px solid $col-white;
+            border-radius: 50%;
+            font-size: 2.0rem;
+        }
+
+        p {
+            margin: 0 10px 30px 56px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .mapa {
+        .widget-mapa {
+            width: 400px;
+            margin-top: 8rem;
+            padding: 25px 35px;
+            color: $col-white;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+}
+

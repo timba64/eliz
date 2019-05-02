@@ -1,0 +1,38 @@
+.site-footer {
+    text-align: center;
+    background-color: $col-red;
+    padding: 4rem 0 8rem;
+
+    .copy {
+        font-size: type-scale(-.2);
+        color: $col-white;
+    }
+
+    .agreement {
+        font-size: type-scale(-.2);
+        color: $col-white;
+        margin: 0 auto 2rem;
+
+        a{
+            color: inherit;
+        }
+    }
+
+    .developer {
+        color: $col-white;
+        font-size: type-scale(-.3);
+        opacity: 0.7;
+
+        a {
+            color: inherit;
+        }
+
+        img {
+            width: 7.5rem;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

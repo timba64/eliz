@@ -1,0 +1,272 @@
+.whom {
+    background: url(img/bg-whomob.jpg) center /cover no-repeat;
+
+    .title-section {
+        margin: 3rem 2rem;
+        text-transform: uppercase;
+    }
+
+    .whom-text {
+        margin: 3rem auto 3rem;
+        text-align: center;
+    }
+
+    .wr-row {
+        margin: 3rem auto;
+    }
+
+    .cell {
+        text-align: left;
+        height: 120px;
+        margin: 0 12px 12px;
+
+        &:first-child {
+            background: url(img/fwho-1.jpg) center /cover no-repeat;
+        }
+
+        &:nth-child(2) {
+            background: url(img/fwho-2.jpg) center /cover no-repeat;
+        }
+        &:nth-child(3) {
+            background: url(img/fwho-3.jpg) center /cover no-repeat;
+        }
+
+        &:last-child {
+            background: url(img/fwho-4.jpg) center /cover no-repeat;
+        }
+
+        .cell-text {
+            padding: 1.4rem 0 0 1.4rem;
+
+            &:after {
+                display: block;
+                position: relative;
+                bottom: -8px;
+                content: "";
+                height: 1px;
+                width: 100px;
+                background: $col-red;
+            }
+        }
+    }
+
+    .whom-form {
+        width: 100%;
+        margin: 15px auto 15px;
+        padding: 8px;
+        background-color: $col-white;
+
+        .el-form {
+            margin: 10px 0;
+
+            input {
+                width: 100%;
+                background-color: #f3f3f3;
+                padding: 6px 10px;
+                text-align: center;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:active {
+                    outline: none;
+                }
+            }
+        }
+
+
+        .sub-form {
+            margin: 20px 0;
+
+            input {
+                background: $col-red;
+                color: $col-white;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .ajax-loader {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 374px) {
+    .whom {
+
+        .whom-form {
+            width: 92%;
+        }
+
+        .decor_one {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            margin: 0 auto;
+            background: $col-red;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 17px;
+                left: -17px;
+                width: 35px;
+                height: 2px;
+                background: $col-red;
+                @include rotate(90deg);
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 16px;
+                right: -15px;
+                width: 32px;
+                height: 2px;
+                background: $col-red;
+                @include rotate(90deg);
+            }
+        }
+
+        .decor_two {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            margin: 0 auto 6rem;
+            background: $col-red;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -17px;
+                left: -17px;
+                width: 35px;
+                height: 2px;
+                background: $col-red;
+                @include rotate(90deg);
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -16px;
+                right: -15px;
+                width: 32px;
+                height: 2px;
+                background: $col-red;
+                @include rotate(90deg);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .whom {
+        .cell {
+            width: 48%;
+            float: left;
+            margin: 0 7px 14px;
+        }
+
+        .whom-form {
+            width: 540px;
+        }
+
+        .decor_one {
+            width: 560px;
+        }
+
+        .decor_two {
+            width: 560px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .whom {
+        background: url(img/bg-whom.jpg) center /cover no-repeat;
+
+        .title-section {
+            margin: 6rem 5rem;
+        }
+
+        .whom-text {
+            width: 840px;
+            margin: 3rem auto 5rem;
+        }
+
+        .wr-row {
+            width: 880px;
+            margin: 3rem auto 5rem;
+        }
+
+        .cell {
+            .cell-text {
+                padding: 2rem 0 0 2rem;
+            }
+        }
+
+        .whom-form {
+            width: 780px;
+            background-color: $col-white;
+
+            .el-form {
+                display: inline-block;
+                width: 170px;
+                margin: 30px 10px 30px 0;
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            .sub-form {
+                margin: 30px 0;
+            }
+        }
+
+        .decor_one {
+            width: 804px;
+            margin: 0 auto;
+
+            &::before {
+                top: 17px;
+                left: -17px;
+                width: 35px;
+            }
+
+            &::after {
+                top: 16px;
+                right: -15px;
+                width: 32px;
+            }
+        }
+
+        .decor_two {
+            width: 804px;
+            margin: 0 auto 6rem;
+
+
+            &::before {
+                top: -17px;
+                left: -17px;
+                width: 35px;
+            }
+
+            &::after {
+                top: -16px;
+                right: -15px;
+                width: 32px;
+            }
+        }
+    }
+}

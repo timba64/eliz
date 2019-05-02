@@ -1,0 +1,134 @@
+.hww {
+    background: url(img/bg-hwwmob.jpg) center /cover no-repeat;
+    padding-bottom: 20rem;
+    overflow: hidden;
+
+    .title-section {
+        margin: 3rem 2rem;
+        text-transform: uppercase;
+    }
+
+    .hww-widget {
+        position: relative;
+        width: 316px;
+        height: 74px;
+        background: $col-white;
+        margin-bottom: 2.4rem;
+        padding: 1.2rem;
+
+        & span[class^="icon-"] {
+            position: absolute;
+            top: 14px;
+            padding: 10px;
+            font-size: 2.4rem;
+            border: 1px solid $col-black;
+            border-radius: 50%;
+        }
+
+        &:hover {
+            background: $col-red;
+            color: $col-white;
+
+            span {
+                border: 1px solid $col-white;
+            }
+        }
+
+        &.hww-2 {
+            margin-left: 100px;
+        }
+
+        &.hww-4 {
+            margin-left: 100px;
+        }
+
+        p {
+            margin: 2px 2px 2px 58px;
+        }
+    }
+}
+
+.hww-container {
+    position: relative;
+
+    .wr-img {
+        position: absolute;
+        top: 156px;
+        right: 0px;
+        width: 330px;
+        height: 186px;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInRight {
+    animation-name: slideInRight;
+  }
+
+  .slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+  }
+
+  .anime {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+@media screen and (min-width: 374px) {
+    .hww-container {
+        .wr-img {
+            top: 480px;
+            right: 10px;
+            width: 330px;
+            height: 186px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hww {
+        padding-bottom: 3rem;
+    }
+
+    .hww-container {
+        .wr-img {
+            top: 156px;
+            right: -62px;
+            width: 484px;
+            height: 274px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hww {
+        background: url(img/bg-hww.jpg) center /cover no-repeat;
+        padding-bottom: 6rem;
+
+        .title-section {
+            margin: 6rem 5rem;
+        }
+    }
+
+    .hww-container {
+        .wr-img {
+            top: 156px;
+            right: -62px;
+            width: 780px;
+            height: 440px;
+        }
+    }
+}
